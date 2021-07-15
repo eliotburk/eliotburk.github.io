@@ -19,7 +19,41 @@ img {
   margin-right: 48px;
   margin-left: 24px;  
 }
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
  </style>
  <body>
      <div>
@@ -66,6 +100,15 @@ My email: <a href="mailto:erburk@gmail.com" target="_blank" rel="noreferrer noop
     <th>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ABC_z3IPL1o" title="Summer Music for Tub of Water & Four Hands (7/11/2021)" 
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+                <div class="tooltip">Hover to Read About this Piece
+                <span class="tooltiptext">A short composition I made with Z.A. Stenger on 7/11/2021. 
+                    The impulse to compose it was triggered by an improvisation I did with Jeremy Rosenstock as a part of the Westben Performer-Composer Residency a few days earlier:
+                    Jeremy was playing with stones and shells, and I decided that water would be an appropriate accompaniment. When working with the water and tub only, quite a large
+                    variety of interesting actions were possible. The piece is strcutured around increasing contrasts between different actions, 
+                    revealing them through devolpmental blurring  to be part of a singular fluid materiality.
+                    </span>
+                    </div>
         <br><br>
       </th>
     <th>
